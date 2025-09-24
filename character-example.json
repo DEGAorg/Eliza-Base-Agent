@@ -24,13 +24,25 @@
     "@elizaos/plugin-sql",
     "@elizaos/plugin-openai",
     "@elizaos/plugin-bootstrap",
-    "@elizaos/plugin-mcp"
+    "@elizaos/plugin-mcp",
+    "@elizaos/plugin-discord"
   ],
   "settings": {
     "voice": {
       "model": "alloy"
     },
     "mcp": {
+      "servers": {
+        "midnight-mcp": {
+          "type": "stdio",
+          "name": "Midnight MCP",
+          "command": "bash",
+          "args": [
+            "-c",
+            "source ~/.nvm/nvm.sh && AGENT_ID=workshop nvm exec 22.15.1 node /Users/cerratoa/midnight-workshop-test/midnight-mcp/dist/stdio-server.js"
+          ]
+        }
+      }
     }
   },
   "style": {
